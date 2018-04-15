@@ -390,6 +390,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#fork-the-projects" title="Fork the projects" class="md-nav__link">
+    Fork the projects
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#clone-the-projects" title="Clone the projects" class="md-nav__link">
     Clone the projects
   </a>
@@ -549,6 +556,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#fork-the-projects" title="Fork the projects" class="md-nav__link">
+    Fork the projects
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#clone-the-projects" title="Clone the projects" class="md-nav__link">
     Clone the projects
   </a>
@@ -649,6 +663,14 @@ a web page will pop up with the instructions to help you add it to Github.</p>
 <li><a href="https://developers.google.com/maps/documentation/javascript/get-api-key">Google Maps JavaScript API</a></li>
 </ul>
 <h3 id="environment-variables">Environment variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h3>
+<div class="admonition tips">
+<p class="admonition-title">Tips</p>
+<p>Add the RYR variables to your <code>~/.bash_profile</code> to avoid exporting them every time:
+<div class="codehilite"><pre><span></span><span class="c1"># Set RYR variables.</span>
+<span class="nb">export</span> <span class="nv">RYR_GLOBAL_CONFIG_DIR</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/.config/ryr&quot;</span>
+<span class="nb">export</span> <span class="nv">RYR_PROJECT_DIR</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/projects/request-yo-racks&quot;</span>
+</pre></div></p>
+</div>
 <p>Once your accounts are setup, store your developer keys in a global environment file. This file should be located in
 <code>~/.config/ryr</code>, which is your configuration directory for the request-yo-racks project.</p>
 <p>Export the location of the configuration directory to an environment variable:
@@ -657,11 +679,11 @@ a web page will pop up with the instructions to help you add it to Github.</p>
 <p>Then create the <code>ryr-env.sh</code> script:
 <div class="codehilite"><pre><span></span>mkdir -p <span class="s2">&quot;</span><span class="si">${</span><span class="nv">RYR_GLOBAL_CONFIG_DIR</span><span class="si">}</span><span class="s2">&quot;</span>
 cat <span class="s">&lt;&lt; EOF &gt; &quot;${RYR_GLOBAL_CONFIG_DIR}/ryr-env.sh&quot;</span>
-<span class="s">export RYR_COLLECTOR_YELP_CLIENT_ID=&lt;redacted&gt;</span>
-<span class="s">export RYR_COLLECTOR_YELP_CLIENT_SECRET=&lt;redacted&gt;</span>
-<span class="s">export RYR_COLLECTOR_GOOGLE_PLACES_API_KEY=&lt;redacted&gt;</span>
-<span class="s">export RYR_COLLECTOR_GOOGLE_GEOCODING_API_KEY=&lt;redacted&gt;</span>
-<span class="s">export RYR_WEB_GOOGLE_MAPS_API_KEY=&lt;redacted&gt;</span>
+<span class="s">export RYR_COLLECTOR_YELP_CLIENT_ID=foo</span>
+<span class="s">export RYR_COLLECTOR_YELP_CLIENT_SECRET=foo</span>
+<span class="s">export RYR_COLLECTOR_GOOGLE_PLACES_API_KEY=foo</span>
+<span class="s">export RYR_COLLECTOR_GOOGLE_GEOCODING_API_KEY=foo</span>
+<span class="s">export RYR_WEB_GOOGLE_MAPS_API_KEY=foo</span>
 <span class="s">export API_BASE_URL=http://api.192.168.99.100.nip.io/</span>
 <span class="s">EOF</span>
 chmod <span class="m">400</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">RYR_GLOBAL_CONFIG_DIR</span><span class="si">}</span><span class="s2">/ryr-env.sh&quot;</span>
@@ -670,11 +692,11 @@ chmod <span class="m">400</span> <span class="s2">&quot;</span><span class="si">
 <code>~/.config/ryr/kubernetes-secrets</code> folder:</p>
 <div class="codehilite"><pre><span></span>mkdir -p <span class="s2">&quot;</span><span class="si">${</span><span class="nv">RYR_GLOBAL_CONFIG_DIR</span><span class="si">}</span><span class="s2">/kubernetes-secrets&quot;</span>
 <span class="nb">cd</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">RYR_GLOBAL_CONFIG_DIR</span><span class="si">}</span><span class="s2">/kubernetes-secrets&quot;</span>
-<span class="nb">echo</span> <span class="s2">&quot;&lt;redacted&gt;&quot;</span> &gt; RYR_COLLECTOR_YELP_CLIENT_ID
-<span class="nb">echo</span> <span class="s2">&quot;&lt;redacted&gt;&quot;</span> &gt; RYR_COLLECTOR_YELP_CLIENT_SECRET
-<span class="nb">echo</span> <span class="s2">&quot;&lt;redacted&gt;&quot;</span> &gt; RYR_COLLECTOR_GOOGLE_PLACES_API_KEY
-<span class="nb">echo</span> <span class="s2">&quot;&lt;redacted&gt;&quot;</span> &gt; RYR_COLLECTOR_GOOGLE_GEOCODING_API_KEY
-<span class="nb">echo</span> <span class="s2">&quot;&lt;redacted&gt;&quot;</span> &gt; RYR_WEB_GOOGLE_MAPS_API_KEY
+<span class="nb">echo</span> <span class="s2">&quot;foo&quot;</span> &gt; RYR_COLLECTOR_YELP_CLIENT_ID
+<span class="nb">echo</span> <span class="s2">&quot;foo&quot;</span> &gt; RYR_COLLECTOR_YELP_CLIENT_SECRET
+<span class="nb">echo</span> <span class="s2">&quot;foo&quot;</span> &gt; RYR_COLLECTOR_GOOGLE_PLACES_API_KEY
+<span class="nb">echo</span> <span class="s2">&quot;foo&quot;</span> &gt; RYR_COLLECTOR_GOOGLE_GEOCODING_API_KEY
+<span class="nb">echo</span> <span class="s2">&quot;foo&quot;</span> &gt; RYR_WEB_GOOGLE_MAPS_API_KEY
 </pre></div>
 
 <p>At the end of the process, your <code>~/.config/ryr</code> folder should look like this:
@@ -688,15 +710,19 @@ chmod <span class="m">400</span> <span class="s2">&quot;</span><span class="si">
 │   └── RYR_WEB_GOOGLE_MAPS_API_KEY
 └── ryr-env.sh
 </pre></div></p>
+<h2 id="fork-the-projects">Fork the projects<a class="headerlink" href="#fork-the-projects" title="Permanent link">&para;</a></h2>
+<p>Go to the <a href="https://github.com/request-yo-racks">Request Yo Racks</a> organization on Github and
+<a href="https://help.github.com/articles/fork-a-repo/">fork</a> the <code>infra</code>, <code>api</code>, and <code>web</code> projects (the <code>charts</code> and <code>docs</code> projects are optional as they are no required to run RYR).</p>
 <h2 id="clone-the-projects">Clone the projects<a class="headerlink" href="#clone-the-projects" title="Permanent link">&para;</a></h2>
 <p>Configure a folder which will contain the RYR projects:
 <div class="codehilite"><pre><span></span><span class="nb">export</span> <span class="nv">RYR_PROJECT_DIR</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/projects/request-yo-racks&quot;</span>
 </pre></div></p>
 <p>Clone the projects (the <code>charts</code> and <code>docs</code> projects are optional as they are no required to run RYR):
-<div class="codehilite"><pre><span></span>mkdir -p <span class="s2">&quot;</span><span class="si">${</span><span class="nv">RYR_PROJECT_DIR</span><span class="si">}</span><span class="s2">&quot;</span>
+<div class="codehilite"><pre><span></span><span class="nb">export</span> <span class="nv">GH_USER</span><span class="o">=</span>&lt;your_github_user_name&gt;
+mkdir -p <span class="s2">&quot;</span><span class="si">${</span><span class="nv">RYR_PROJECT_DIR</span><span class="si">}</span><span class="s2">&quot;</span>
 <span class="nb">cd</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">RYR_PROJECT_DIR</span><span class="si">}</span><span class="s2">&quot;</span>
 <span class="k">for</span> project in api infra web<span class="p">;</span> <span class="k">do</span>
-  git clone git@github.com:request-yo-racks/<span class="si">${</span><span class="nv">project</span><span class="si">}</span>.git
+  git clone git@github.com:<span class="si">${</span><span class="nv">GH_USER</span><span class="si">}</span>/<span class="si">${</span><span class="nv">project</span><span class="si">}</span>.git
 <span class="k">done</span>
 </pre></div></p>
 <p>Each project is provided with a <code>Makefile</code> and can be simply setup with the <code>make</code> command.</p>
