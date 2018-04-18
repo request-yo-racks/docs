@@ -377,15 +377,15 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#environment-variables" title="Environment variables" class="md-nav__link">
     Environment variables
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -543,15 +543,15 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#environment-variables" title="Environment variables" class="md-nav__link">
     Environment variables
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -631,6 +631,7 @@ repository can assist you to install the prerequisites software automatically an
 </pre></div></p>
 <p>At the end of the procedure, your SSH key will be automatically copied to your clipboard and
 a web page will pop up with the instructions to help you add it to Github.</p>
+<p>If nothing pops up, run <code>export BS_SILENT=0</code>, then replay the script.</p>
 </div>
 <h3 id="github">Github<a class="headerlink" href="#github" title="Permanent link">&para;</a></h3>
 <ul>
@@ -662,7 +663,7 @@ a web page will pop up with the instructions to help you add it to Github.</p>
 <li><a href="https://developers.google.com/maps/documentation/geocoding/get-api-key">Google Geocoding API</a></li>
 <li><a href="https://developers.google.com/maps/documentation/javascript/get-api-key">Google Maps JavaScript API</a></li>
 </ul>
-<h3 id="environment-variables">Environment variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h3>
+<h2 id="environment-variables">Environment variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h2>
 <div class="admonition tips">
 <p class="admonition-title">Tips</p>
 <p>Add the RYR variables to your <code>~/.bash_profile</code> to avoid exporting them every time:
@@ -717,9 +718,11 @@ chmod <span class="m">400</span> <span class="s2">&quot;</span><span class="si">
 <p>Configure a folder which will contain the RYR projects:
 <div class="codehilite"><pre><span></span><span class="nb">export</span> <span class="nv">RYR_PROJECT_DIR</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/projects/request-yo-racks&quot;</span>
 </pre></div></p>
-<p>Clone the projects (the <code>charts</code> and <code>docs</code> projects are optional as they are no required to run RYR):
+<p>Configure your Github user:
 <div class="codehilite"><pre><span></span><span class="nb">export</span> <span class="nv">GH_USER</span><span class="o">=</span>&lt;your_github_user_name&gt;
-mkdir -p <span class="s2">&quot;</span><span class="si">${</span><span class="nv">RYR_PROJECT_DIR</span><span class="si">}</span><span class="s2">&quot;</span>
+</pre></div></p>
+<p>Clone the projects (the <code>charts</code> and <code>docs</code> projects are optional as they are no required to run RYR):
+<div class="codehilite"><pre><span></span>mkdir -p <span class="s2">&quot;</span><span class="si">${</span><span class="nv">RYR_PROJECT_DIR</span><span class="si">}</span><span class="s2">&quot;</span>
 <span class="nb">cd</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">RYR_PROJECT_DIR</span><span class="si">}</span><span class="s2">&quot;</span>
 <span class="k">for</span> project in api infra web<span class="p">;</span> <span class="k">do</span>
   git clone git@github.com:<span class="si">${</span><span class="nv">GH_USER</span><span class="si">}</span>/<span class="si">${</span><span class="nv">project</span><span class="si">}</span>.git
