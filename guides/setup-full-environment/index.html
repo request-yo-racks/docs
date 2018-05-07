@@ -397,8 +397,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#clone-the-projects" title="Clone the projects" class="md-nav__link">
-    Clone the projects
+  <a href="#clone-or-update-the-projects" title="Clone or update the projects" class="md-nav__link">
+    Clone or update the projects
   </a>
   
 </li>
@@ -563,8 +563,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#clone-the-projects" title="Clone the projects" class="md-nav__link">
-    Clone the projects
+  <a href="#clone-or-update-the-projects" title="Clone or update the projects" class="md-nav__link">
+    Clone or update the projects
   </a>
   
 </li>
@@ -714,18 +714,18 @@ chmod <span class="m">400</span> <span class="s2">&quot;</span><span class="si">
 <h2 id="fork-the-projects">Fork the projects<a class="headerlink" href="#fork-the-projects" title="Permanent link">&para;</a></h2>
 <p>Go to the <a href="https://github.com/request-yo-racks">Request Yo Racks</a> organization on Github and
 <a href="https://help.github.com/articles/fork-a-repo/">fork</a> the <code>infra</code>, <code>api</code>, and <code>web</code> projects (the <code>charts</code> and <code>docs</code> projects are optional as they are no required to run RYR).</p>
-<h2 id="clone-the-projects">Clone the projects<a class="headerlink" href="#clone-the-projects" title="Permanent link">&para;</a></h2>
+<h2 id="clone-or-update-the-projects">Clone or update the projects<a class="headerlink" href="#clone-or-update-the-projects" title="Permanent link">&para;</a></h2>
 <p>Configure a folder which will contain the RYR projects:
 <div class="codehilite"><pre><span></span><span class="nb">export</span> <span class="nv">RYR_PROJECT_DIR</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/projects/request-yo-racks&quot;</span>
 </pre></div></p>
 <p>Configure your Github user:
 <div class="codehilite"><pre><span></span><span class="nb">export</span> <span class="nv">GH_USER</span><span class="o">=</span>&lt;your_github_user_name&gt;
 </pre></div></p>
-<p>Clone the projects (the <code>charts</code> and <code>docs</code> projects are optional as they are no required to run RYR):
+<p>Clone or update the projects (the <code>charts</code> and <code>docs</code> projects are optional as they are no required to run RYR):
 <div class="codehilite"><pre><span></span>mkdir -p <span class="s2">&quot;</span><span class="si">${</span><span class="nv">RYR_PROJECT_DIR</span><span class="si">}</span><span class="s2">&quot;</span>
 <span class="nb">cd</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">RYR_PROJECT_DIR</span><span class="si">}</span><span class="s2">&quot;</span>
 <span class="k">for</span> project in api infra web<span class="p">;</span> <span class="k">do</span>
-  git clone git@github.com:<span class="si">${</span><span class="nv">GH_USER</span><span class="si">}</span>/<span class="si">${</span><span class="nv">project</span><span class="si">}</span>.git
+  git clone git@github.com:<span class="si">${</span><span class="nv">GH_USER</span><span class="si">}</span>/<span class="si">${</span><span class="nv">project</span><span class="si">}</span>.git <span class="o">||</span> git -C <span class="si">${</span><span class="nv">project</span><span class="si">}</span>/ pull upstream master
 <span class="k">done</span>
 </pre></div></p>
 <p>Each project is provided with a <code>Makefile</code> and can be simply setup with the <code>make</code> command.</p>
