@@ -724,8 +724,9 @@ chmod <span class="m">400</span> <span class="s2">&quot;</span><span class="si">
 <p>Clone or update the projects (the <code>charts</code> and <code>docs</code> projects are optional as they are no required to run RYR):
 <div class="codehilite"><pre><span></span>mkdir -p <span class="s2">&quot;</span><span class="si">${</span><span class="nv">RYR_PROJECT_DIR</span><span class="si">}</span><span class="s2">&quot;</span>
 <span class="nb">cd</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">RYR_PROJECT_DIR</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="k">for</span> project in api infra web<span class="p">;</span> <span class="k">do</span>
-  git clone git@github.com:<span class="si">${</span><span class="nv">GH_USER</span><span class="si">}</span>/<span class="si">${</span><span class="nv">project</span><span class="si">}</span>.git <span class="o">||</span> git -C <span class="si">${</span><span class="nv">project</span><span class="si">}</span>/ pull upstream master
+<span class="k">for</span> project in api charts docs infra web<span class="p">;</span> <span class="k">do</span>
+  git clone git@github.com:<span class="si">${</span><span class="nv">GH_USER</span><span class="si">}</span>/<span class="si">${</span><span class="nv">project</span><span class="si">}</span>.git <span class="o">||</span> git -C <span class="si">${</span><span class="nv">project</span><span class="si">}</span>/ pull upstream master<span class="p">;</span>
+  git  -C <span class="si">${</span><span class="nv">project</span><span class="si">}</span> remote add upstream git@github.com:request-yo-racks/<span class="si">${</span><span class="nv">project</span><span class="si">}</span>.git<span class="p">;</span>
 <span class="k">done</span>
 </pre></div></p>
 <p>Each project is provided with a <code>Makefile</code> and can be simply setup with the <code>make</code> command.</p>
