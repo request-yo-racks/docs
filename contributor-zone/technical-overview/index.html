@@ -313,6 +313,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#infrastructure-design" title="Infrastructure design" class="md-nav__link">
+    Infrastructure design
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#api" title="API" class="md-nav__link">
     API
   </a>
@@ -447,6 +454,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#infrastructure-design" title="Infrastructure design" class="md-nav__link">
+    Infrastructure design
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#api" title="API" class="md-nav__link">
     API
   </a>
@@ -490,22 +504,25 @@
 <li>Everything must be documented.</li>
 <li>Everything must be containerized.</li>
 </ul>
+<h2 id="infrastructure-design">Infrastructure design<a class="headerlink" href="#infrastructure-design" title="Permanent link">&para;</a></h2>
+<p><img alt="Infrastructure design" src="../img/ryr_container_infrastructure.png" />.</p>
 <h2 id="api">API<a class="headerlink" href="#api" title="Permanent link">&para;</a></h2>
-<p>The API is done in <a href="https://www.python.org/">Python</a>, using 
-<a href="http://www.django-rest-framework.org/">Django REST Framework</a> (DRF).</p>
-<p>The tasks will be handled by <a href="http://docs.celeryproject.org/en/latest/index.html">Celery</a> to process them
-asynchronously.</p>
-<p>All the Python documentation is written in <a href="ttp://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html">reStructuredText</a> 
+<p>The API is made with <a href="https://www.python.org/">Python</a>, using
+<a href="http://www.django-rest-framework.org/">Django REST Framework</a> (DRF), and served by <a href="http://gunicorn.org/">gUnicorn</a></p>
+<p>The tasks are handled by <a href="http://docs.celeryproject.org/en/latest/index.html">Celery</a> to process them
+asynchronously or in parallel. <a href="https://flower.readthedocs.io/en/latest/">Flower</a> is used to monitor them.</p>
+<p>All the Python documentation is written in <a href="ttp://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html">reStructuredText</a>
 and generated with <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a>.</p>
 <p>Repository: <a href="https://github.com/request-yo-racks/api">API</a></p>
 <h2 id="web">Web<a class="headerlink" href="#web" title="Permanent link">&para;</a></h2>
-<p>The frontend is a <a href="https://developers.google.com/web/progressive-web-apps/">Progressive Web Application (PWA)</a>. 
+<p>The frontend is a <a href="https://developers.google.com/web/progressive-web-apps/">Progressive Web Application (PWA)</a>.
 The <a href="https://www.polymer-project.org/">Polymer</a> library offers the ability to quickly create a PWA implementing the
-<a href="https://developers.google.com/web/fundamentals/performance/prpl-pattern/">PRPL pattern</a>, and to build 
+<a href="https://developers.google.com/web/fundamentals/performance/prpl-pattern/">PRPL pattern</a>, and to build
 <a href="https://www.webcomponents.org/">web components</a>.</p>
 <p>Repository: <a href="https://github.com/request-yo-racks/web">Web</a></p>
 <h2 id="infrastructure">Infrastructure<a class="headerlink" href="#infrastructure" title="Permanent link">&para;</a></h2>
-<p>The projects are fully containerized using <a href="https://docs.docker.com/engine/understanding-docker/">Docker</a> and will be deployed on a <a href="https://kubernetes.io/">Kubernetes</a> cluster on the <a href="https://cloud.google.com/">GCP</a>.</p>
+<p>The projects are fully containerized using <a href="https://docs.docker.com/engine/understanding-docker/">Docker</a> and deployed
+on a <a href="https://kubernetes.io/">Kubernetes</a> cluster on the <a href="https://cloud.google.com/">GCP</a>.</p>
                 
                   
                 
