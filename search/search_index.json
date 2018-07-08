@@ -151,6 +151,21 @@
             "title": "Web"
         },
         {
+            "location": "/guides/update-branch/",
+            "text": "Sync up your fork with upstream\n\u00b6\n\n\nWhen working with other developers, it can be that the branch your are working on becomes out of sync with the base\nbranch. In your Github PR your will see the following message:\n\n\n\n\nIf this happens, you need to retrieve all the changes from upstream, and apply them to your branch by rebasing it on top of master.\n\n\nSteps to keep your PR update-to-date\n\u00b6\n\n\nSync up your fork with \nupstream\n:\n\ngit checkout master\ngit pull upstream master\ngit push origin master\n\n\n\nRebase your branch:\n\ngit checkout -\ngit rebase master\n\n\n\nUpdate your PR:\n\ngit push origin -f",
+            "title": "Rebase your branch"
+        },
+        {
+            "location": "/guides/update-branch/#sync-up-your-fork-with-upstream",
+            "text": "When working with other developers, it can be that the branch your are working on becomes out of sync with the base\nbranch. In your Github PR your will see the following message:   If this happens, you need to retrieve all the changes from upstream, and apply them to your branch by rebasing it on top of master.",
+            "title": "Sync up your fork with upstream"
+        },
+        {
+            "location": "/guides/update-branch/#steps-to-keep-your-pr-update-to-date",
+            "text": "Sync up your fork with  upstream : git checkout master\ngit pull upstream master\ngit push origin master  Rebase your branch: git checkout -\ngit rebase master  Update your PR: git push origin -f",
+            "title": "Steps to keep your PR update-to-date"
+        },
+        {
             "location": "/about/license/",
             "text": "License\n\u00b6\n\n\n\"Request Yo Racks\" is a collection of open source projects licensed under \nThe MIT License\n.",
             "title": "License"
