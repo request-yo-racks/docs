@@ -36,7 +36,7 @@
     
     
       
-        <title>Setup full environment - Request Yo Racks Documentation</title>
+        <title>Setting up a local environment - Request Yo Racks Documentation</title>
       
     
     
@@ -61,6 +61,8 @@
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../../css/extra.css">
     
     
   </head>
@@ -105,7 +107,7 @@
                 Request Yo Racks Documentation
               </span>
               <span class="md-header-nav__topic">
-                Setup full environment
+                Setting up a local environment
               </span>
             
           
@@ -339,11 +341,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Setup full environment
+        Setting up a local environment
       </label>
     
-    <a href="./" title="Setup full environment" class="md-nav__link md-nav__link--active">
-      Setup full environment
+    <a href="./" title="Setting up a local environment" class="md-nav__link md-nav__link--active">
+      Setting up a local environment
     </a>
     
       
@@ -469,8 +471,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../update-branch/" title="Rebase your branch" class="md-nav__link">
-      Rebase your branch
+    <a href="../update-branch/" title="Keeping your branch up-to-date" class="md-nav__link">
+      Keeping your branch up-to-date
     </a>
   </li>
 
@@ -703,12 +705,18 @@ a web page will pop up with the instructions to help you add it to Github.</p>
 <span class="nb">export</span> <span class="nv">RYR_PROJECT_DIR</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/projects/request-yo-racks&quot;</span>
 </pre></div></p>
 </div>
+<ol>
+<li>
 <p>Once your accounts are setup, store your developer keys in a global environment file. This file should be located in
 <code>~/.config/ryr</code>, which is your configuration directory for the request-yo-racks project.</p>
-<p>Export the location of the configuration directory to an environment variable:
+</li>
+<li>
+<p>Export the location of the configuration directory to an environment variable.
 <div class="codehilite"><pre><span></span><span class="nb">export</span> <span class="nv">RYR_GLOBAL_CONFIG_DIR</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/.config/ryr&quot;</span>
 </pre></div></p>
-<p>Then create the <code>ryr-env.sh</code> script:
+</li>
+<li>
+<p>Then create the <code>ryr-env.sh</code> script.
 <div class="codehilite"><pre><span></span>mkdir -p <span class="s2">&quot;</span><span class="si">${</span><span class="nv">RYR_GLOBAL_CONFIG_DIR</span><span class="si">}</span><span class="s2">&quot;</span>
 cat <span class="s">&lt;&lt; EOF &gt; &quot;${RYR_GLOBAL_CONFIG_DIR}/ryr-env.sh&quot;</span>
 <span class="s">export RYR_COLLECTOR_YELP_CLIENT_ID=foo</span>
@@ -720,8 +728,9 @@ cat <span class="s">&lt;&lt; EOF &gt; &quot;${RYR_GLOBAL_CONFIG_DIR}/ryr-env.sh&
 <span class="s">EOF</span>
 chmod <span class="m">400</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">RYR_GLOBAL_CONFIG_DIR</span><span class="si">}</span><span class="s2">/ryr-env.sh&quot;</span>
 </pre></div></p>
-<p>For creating Kubernetes secrets, you need to create one file per key in the
-<code>~/.config/ryr/kubernetes-secrets</code> folder:</p>
+</li>
+<li>
+<p>For creating Kubernetes secrets, you need to create one file per key in the <code>~/.config/ryr/kubernetes-secrets</code> folder.
 <div class="codehilite"><pre><span></span>mkdir -p <span class="s2">&quot;</span><span class="si">${</span><span class="nv">RYR_GLOBAL_CONFIG_DIR</span><span class="si">}</span><span class="s2">/kubernetes-secrets&quot;</span>
 <span class="nb">cd</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">RYR_GLOBAL_CONFIG_DIR</span><span class="si">}</span><span class="s2">/kubernetes-secrets&quot;</span>
 <span class="nb">echo</span> <span class="s2">&quot;foo&quot;</span> &gt; RYR_COLLECTOR_YELP_CLIENT_ID
@@ -729,8 +738,9 @@ chmod <span class="m">400</span> <span class="s2">&quot;</span><span class="si">
 <span class="nb">echo</span> <span class="s2">&quot;foo&quot;</span> &gt; RYR_COLLECTOR_GOOGLE_PLACES_API_KEY
 <span class="nb">echo</span> <span class="s2">&quot;foo&quot;</span> &gt; RYR_COLLECTOR_GOOGLE_GEOCODING_API_KEY
 <span class="nb">echo</span> <span class="s2">&quot;foo&quot;</span> &gt; RYR_WEB_GOOGLE_MAPS_API_KEY
-</pre></div>
-
+</pre></div></p>
+</li>
+</ol>
 <p>At the end of the process, your <code>~/.config/ryr</code> folder should look like this:
 <div class="codehilite"><pre><span></span><span class="o">[</span>~/.config/ryr<span class="o">]</span> $ tree -L <span class="m">2</span>
 .
@@ -746,13 +756,19 @@ chmod <span class="m">400</span> <span class="s2">&quot;</span><span class="si">
 <p>Go to the <a href="https://github.com/request-yo-racks">Request Yo Racks</a> organization on Github and
 <a href="https://help.github.com/articles/fork-a-repo/">fork</a> the <code>infra</code>, <code>api</code>, and <code>web</code> projects (the <code>charts</code> and <code>docs</code> projects are optional as they are no required to run RYR).</p>
 <h2 id="clone-or-update-the-projects">Clone or update the projects<a class="headerlink" href="#clone-or-update-the-projects" title="Permanent link">&para;</a></h2>
-<p>Configure a folder which will contain the RYR projects:
+<ol>
+<li>
+<p>Configure a folder which will contain the RYR projects.
 <div class="codehilite"><pre><span></span><span class="nb">export</span> <span class="nv">RYR_PROJECT_DIR</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/projects/request-yo-racks&quot;</span>
 </pre></div></p>
-<p>Configure your Github user:
+</li>
+<li>
+<p>Configure your Github user.
 <div class="codehilite"><pre><span></span><span class="nb">export</span> <span class="nv">GH_USER</span><span class="o">=</span>&lt;your_github_user_name&gt;
 </pre></div></p>
-<p>Clone or update the projects (the <code>charts</code> and <code>docs</code> projects are optional as they are no required to run RYR):
+</li>
+<li>
+<p>Clone or update the projects (the <code>charts</code> and <code>docs</code> projects are optional as they are no required to run RYR).
 <div class="codehilite"><pre><span></span>mkdir -p <span class="s2">&quot;</span><span class="si">${</span><span class="nv">RYR_PROJECT_DIR</span><span class="si">}</span><span class="s2">&quot;</span>
 <span class="nb">cd</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">RYR_PROJECT_DIR</span><span class="si">}</span><span class="s2">&quot;</span>
 <span class="k">for</span> project in api charts docs infra web<span class="p">;</span> <span class="k">do</span>
@@ -760,6 +776,8 @@ chmod <span class="m">400</span> <span class="s2">&quot;</span><span class="si">
   git  -C <span class="si">${</span><span class="nv">project</span><span class="si">}</span> remote add upstream git@github.com:request-yo-racks/<span class="si">${</span><span class="nv">project</span><span class="si">}</span>.git <span class="m">2</span>&gt; /dev/null<span class="p">;</span>
 <span class="k">done</span>
 </pre></div></p>
+</li>
+</ol>
 <p>Each project is provided with a <code>Makefile</code> and can be simply setup with the <code>make</code> command.</p>
 <h2 id="start-the-services">Start the services<a class="headerlink" href="#start-the-services" title="Permanent link">&para;</a></h2>
 <h3 id="external-services">External services<a class="headerlink" href="#external-services" title="Permanent link">&para;</a></h3>
@@ -830,13 +848,13 @@ file by the <code>Makefile</code>. See the <code>init-config</code> target for m
           </a>
         
         
-          <a href="../update-branch/" title="Rebase your branch" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../update-branch/" title="Keeping your branch up-to-date" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Rebase your branch
+                Keeping your branch up-to-date
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
