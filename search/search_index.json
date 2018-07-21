@@ -2,12 +2,12 @@
     "docs": [
         {
             "location": "/",
-            "text": "Request Yo Racks (Now)!\n\u00b6\n\n\nThe city of Austin offers the possibility to apply for the \nfree installation of bike corrals on the right of way/parking spot close to businesses\n. The process requires the requester to write an email to a specific service of the city, and include additional information about the location and the business owner(s).\n\n\nBut there are two problems with this approach:\n\n\n\n\n\n\nThe first problem is that people do not want to spend the time to write the email and collect the necessary information.\n\n\n\n\n\n\nThe second one is that, in spite of the fact that the people in charge of the program are willing to help, the process is not completely straightforward:\n\n\n\n\n\"There will generally be at least a few back and forth messages associated with a bike parking request.\"\n\n\n\n\n\n\n\n\n\u201cRequest yo rack\u201d proposes to simplify the process by automating all these tasks, and reducing the requester efforts to 3 simple steps:\n\n\n\n\nSelect the location on the map.\n\n\nReview/Edit the information.\n\n\nSubmit.",
+            "text": "Request Yo Racks (Now)!\n\u00b6\n\n\nThe city of Austin offers the possibility to apply for the \nfree installation of bike corrals on the right of way/parking spot close to businesses\n. The process requires the requester to write an email to a specific service of the city, and include additional information about the location and the business owner(s).\n\n\nBut there are two problems with this approach:\n\n\n\n\n\n\nThe first problem is that people do not want to spend the time to write the email and collect the necessary information.\n\n\n\n\n\n\nThe second one is that, in spite of the fact that the people in charge of the program are willing to help, the process is not completely straightforward:\n\n\n\n\n\"There will generally be at least a few back and forth messages associated with a bike parking request.\"\n\n\n\n\n\n\n\n\n\u201cRequest yo racks\u201d proposes to simplify the process by automating all these tasks, and reducing the requester efforts to 3 simple steps:\n\n\n\n\nSelect the location on the map.\n\n\nReview/Edit the information.\n\n\nSubmit.",
             "title": "Home"
         },
         {
             "location": "/#request-yo-racks-now",
-            "text": "The city of Austin offers the possibility to apply for the  free installation of bike corrals on the right of way/parking spot close to businesses . The process requires the requester to write an email to a specific service of the city, and include additional information about the location and the business owner(s).  But there are two problems with this approach:    The first problem is that people do not want to spend the time to write the email and collect the necessary information.    The second one is that, in spite of the fact that the people in charge of the program are willing to help, the process is not completely straightforward:   \"There will generally be at least a few back and forth messages associated with a bike parking request.\"     \u201cRequest yo rack\u201d proposes to simplify the process by automating all these tasks, and reducing the requester efforts to 3 simple steps:   Select the location on the map.  Review/Edit the information.  Submit.",
+            "text": "The city of Austin offers the possibility to apply for the  free installation of bike corrals on the right of way/parking spot close to businesses . The process requires the requester to write an email to a specific service of the city, and include additional information about the location and the business owner(s).  But there are two problems with this approach:    The first problem is that people do not want to spend the time to write the email and collect the necessary information.    The second one is that, in spite of the fact that the people in charge of the program are willing to help, the process is not completely straightforward:   \"There will generally be at least a few back and forth messages associated with a bike parking request.\"     \u201cRequest yo racks\u201d proposes to simplify the process by automating all these tasks, and reducing the requester efforts to 3 simple steps:   Select the location on the map.  Review/Edit the information.  Submit.",
             "title": "Request Yo Racks (Now)!"
         },
         {
@@ -79,6 +79,51 @@
             "location": "/contributor-zone/technical-overview/#infrastructure",
             "text": "The projects are fully containerized using  Docker  and deployed\non a  Kubernetes  cluster on the  GCP .",
             "title": "Infrastructure"
+        },
+        {
+            "location": "/contributor-zone/services-costs/",
+            "text": "Services and costs\n\u00b6\n\n\nHere is a breakdown of the services and costs associated to running the Request Yo Racks services.\n\n\nDeployed services\n\u00b6\n\n\nInfrastructure support\n\u00b6\n\n\n\n\nIngress Controller\n: L7 Load balancer\n\n\nExternal DNS Manager\n: Hosted DNS zone automated management\n\n\nCertManager\n: SSL Certificate management\n\n\nStackdriver\n: Logging\n\n\n\n\nProject support\n\u00b6\n\n\n\n\nRedis\n: Caching and broker for distributed tasks\n\n\nPostgres\n: SQL Database\n\n\n\n\nRYR projects\n\u00b6\n\n\nThese projects are for RYR itself, the frontend, the API and the backend.\n\n\n\n\nRYR API\n\n\nRYR Celery Workers (x2)\n\n\nRYR Celery Flower\n\n\nRYR Web\n\n\n\n\nRYR sites\n\u00b6\n\n\n\n\n\n\n\n\nSite\n\n\nURL\n\n\n\n\n\n\n\n\n\n\nDocs\n\n\ndocs.requestyoracks.org\n\n\n\n\n\n\nCharts\n\n\ncharts.requestyoracks.org\n\n\n\n\n\n\nLanding page\n\n\nlanding.requestyoracks.org\n (but currently \nwww.requestyoracks.org\n)\n\n\n\n\n\n\nwww\n\n\nwww.requestyoracks.org\n (\ncurrently unavailable\n)\n\n\n\n\n\n\nAPI\n\n\napi.requestyoracks.org\n (\ncurrently unavailable\n)\n\n\n\n\n\n\n\n\nExternal Services\n\u00b6\n\n\nThe Request Yo Racks infrastructure uses the free or Open Source tier for all the following services.\n\n\n\n\nGithub\n (with Github pages): Code repositories and static site hosting\n\n\nCircle CI\n: Continuous Integration\n\n\nMergify.io\n: Automatically merge approved Pull Requests\n\n\nCodecov.io\n: Ensure need code contributions come with unit tests\n\n\nGitmate.io\n: Automate some basic administration tasks\n\n\nDocker Hub\n: Registry and pipeline for Docker images\n\n\nLet\u2019s Encrypt\n: Free, automated, and open Certificate Authority\n\n\n\n\nCosts\n\u00b6\n\n\n\n\n\n\n\n\nProvider\n\n\nService\n\n\nCost\n\n\n\n\n\n\n\n\n\n\nGCP\n\n\nKubernetes HA cluster 3 Nodes N1\n\n\n$110.00\n\n\n\n\n\n\nGCP\n\n\nLoad Balancer\n\n\n$18.00\n\n\n\n\n\n\nGCP\n\n\nStorage (100GB)\n\n\n$10.00\n\n\n\n\n\n\nGCP\n\n\nMisc fees\n\n\n$5.00\n\n\n\n\n\n\nGoogle domain\n\n\nDomain name (yearly: $30)\n\n\n$2.50\n\n\n\n\n\n\n\n\nTOTAL\n\n\n$145.50",
+            "title": "Services & costs"
+        },
+        {
+            "location": "/contributor-zone/services-costs/#services-and-costs",
+            "text": "Here is a breakdown of the services and costs associated to running the Request Yo Racks services.",
+            "title": "Services and costs"
+        },
+        {
+            "location": "/contributor-zone/services-costs/#deployed-services",
+            "text": "",
+            "title": "Deployed services"
+        },
+        {
+            "location": "/contributor-zone/services-costs/#infrastructure-support",
+            "text": "Ingress Controller : L7 Load balancer  External DNS Manager : Hosted DNS zone automated management  CertManager : SSL Certificate management  Stackdriver : Logging",
+            "title": "Infrastructure support"
+        },
+        {
+            "location": "/contributor-zone/services-costs/#project-support",
+            "text": "Redis : Caching and broker for distributed tasks  Postgres : SQL Database",
+            "title": "Project support"
+        },
+        {
+            "location": "/contributor-zone/services-costs/#ryr-projects",
+            "text": "These projects are for RYR itself, the frontend, the API and the backend.   RYR API  RYR Celery Workers (x2)  RYR Celery Flower  RYR Web",
+            "title": "RYR projects"
+        },
+        {
+            "location": "/contributor-zone/services-costs/#ryr-sites",
+            "text": "Site  URL      Docs  docs.requestyoracks.org    Charts  charts.requestyoracks.org    Landing page  landing.requestyoracks.org  (but currently  www.requestyoracks.org )    www  www.requestyoracks.org  ( currently unavailable )    API  api.requestyoracks.org  ( currently unavailable )",
+            "title": "RYR sites"
+        },
+        {
+            "location": "/contributor-zone/services-costs/#external-services",
+            "text": "The Request Yo Racks infrastructure uses the free or Open Source tier for all the following services.   Github  (with Github pages): Code repositories and static site hosting  Circle CI : Continuous Integration  Mergify.io : Automatically merge approved Pull Requests  Codecov.io : Ensure need code contributions come with unit tests  Gitmate.io : Automate some basic administration tasks  Docker Hub : Registry and pipeline for Docker images  Let\u2019s Encrypt : Free, automated, and open Certificate Authority",
+            "title": "External Services"
+        },
+        {
+            "location": "/contributor-zone/services-costs/#costs",
+            "text": "Provider  Service  Cost      GCP  Kubernetes HA cluster 3 Nodes N1  $110.00    GCP  Load Balancer  $18.00    GCP  Storage (100GB)  $10.00    GCP  Misc fees  $5.00    Google domain  Domain name (yearly: $30)  $2.50     TOTAL  $145.50",
+            "title": "Costs"
         },
         {
             "location": "/guides/setup-full-environment/",
