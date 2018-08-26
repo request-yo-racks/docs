@@ -1,4 +1,4 @@
-# Liquidprompt installation
+# Installing Liquidprompt
 
 1. Install liquidprompt
 2. Open Terminal

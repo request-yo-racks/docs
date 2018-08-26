@@ -1,4 +1,4 @@
-# Hub installation
+# Installing Hub
 
 1. Install hub
 2. Open Terminal
