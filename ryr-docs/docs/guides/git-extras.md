@@ -6,6 +6,6 @@
     ```bash
     brew install git-extras
     ```
-## Github help links
+## Git Extras help links
 
 * [Git extras](https://github.com/tj/git-extras)
