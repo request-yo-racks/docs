@@ -6,6 +6,6 @@
     brew install liquidprompt
     ```
 
-## Github help links
+## liquidprompt help links
 
 * [Git liquidprompt](https://github.com/nojhan/liquidprompt)

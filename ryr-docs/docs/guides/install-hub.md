@@ -5,6 +5,6 @@
     ```bash
     brew install hub
     ```
-## Github help links
+## Hub help links
 
-* [Git hub](https://github.com/github/hub)
+* [Hub](https://github.com/github/hub)
