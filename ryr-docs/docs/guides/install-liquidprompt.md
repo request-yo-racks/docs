@@ -1,8 +1,7 @@
 # Installing Liquidprompt
 
-1. Install liquidprompt
-2. Open Terminal
-3. Install liquidprompt
+1. Open Terminal
+2. Install liquidprompt
     ```bash
     brew install liquidprompt
     ```

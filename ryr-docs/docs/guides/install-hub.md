@@ -1,8 +1,7 @@
 # Installing Hub
 
-1. Install hub
-2. Open Terminal
-3. Install hub
+1. Open Terminal
+2. Install hub
     ```bash
     brew install hub
     ```
