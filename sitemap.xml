@@ -36,6 +36,21 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>/guides/git-extras/</loc>
+     <lastmod>2018-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/guides/install-hub/</loc>
+     <lastmod>2018-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/guides/install-liquidprompt/</loc>
+     <lastmod>2018-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>/about/license/</loc>
      <lastmod>2018-09-09</lastmod>
      <changefreq>daily</changefreq>

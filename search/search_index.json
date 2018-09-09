@@ -211,6 +211,51 @@
             "title": "Github help links"
         },
         {
+            "location": "/guides/git-extras/",
+            "text": "Installing GIT extras\n\u00b6\n\n\n\n\nOpen Terminal\n\n\nChange the current working directory to your local project.\n\n\nInstall git-extras:\n    \nbrew install git-extras\n\n\n\n\n\nGit Extras help links\n\u00b6\n\n\n\n\nGit extras",
+            "title": "Installing Git extras"
+        },
+        {
+            "location": "/guides/git-extras/#installing-git-extras",
+            "text": "Open Terminal  Change the current working directory to your local project.  Install git-extras:\n     brew install git-extras",
+            "title": "Installing GIT extras"
+        },
+        {
+            "location": "/guides/git-extras/#git-extras-help-links",
+            "text": "Git extras",
+            "title": "Git Extras help links"
+        },
+        {
+            "location": "/guides/install-hub/",
+            "text": "Installing Hub\n\u00b6\n\n\n\n\nOpen Terminal\n\n\nInstall hub\n    \nbrew install hub\n\n\n\n\n\nHub help links\n\u00b6\n\n\n\n\nHub",
+            "title": "Installing Hub"
+        },
+        {
+            "location": "/guides/install-hub/#installing-hub",
+            "text": "Open Terminal  Install hub\n     brew install hub",
+            "title": "Installing Hub"
+        },
+        {
+            "location": "/guides/install-hub/#hub-help-links",
+            "text": "Hub",
+            "title": "Hub help links"
+        },
+        {
+            "location": "/guides/install-liquidprompt/",
+            "text": "Installing Liquidprompt\n\u00b6\n\n\n\n\nOpen Terminal\n\n\nInstall liquidprompt\n    \nbrew install liquidprompt\n\n\n\n\n\nliquidprompt help links\n\u00b6\n\n\n\n\nGit liquidprompt",
+            "title": "Installing Liquidprompt"
+        },
+        {
+            "location": "/guides/install-liquidprompt/#installing-liquidprompt",
+            "text": "Open Terminal  Install liquidprompt\n     brew install liquidprompt",
+            "title": "Installing Liquidprompt"
+        },
+        {
+            "location": "/guides/install-liquidprompt/#liquidprompt-help-links",
+            "text": "Git liquidprompt",
+            "title": "liquidprompt help links"
+        },
+        {
             "location": "/about/license/",
             "text": "License\n\u00b6\n\n\n\"Request Yo Racks\" is a collection of open source projects licensed under \nThe MIT License\n.",
             "title": "License"
