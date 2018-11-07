@@ -361,6 +361,46 @@
             "title": "liquidprompt help links"
         },
         {
+            "location": "/learning/learning/",
+            "text": "Learning resources\n\u00b6\n\n\nSometimes people are affraid to tackle a task or join a project because they think they do not have the appriopriate\nknoweldge. While it might sometimes be true, we, at Request Yo Racks, consider our projects as the best opportunity to\nlearn! And to make it easier for you to learn the ropes, we compiled the best resources!\n\n\nBeginners\n\u00b6\n\n\nLet's start with the fundamentals!\n\n\nTerminal\n\u00b6\n\n\nThe \n\"Really friendly intro to the command line\"\n is a must read/watch for beginners! While targeted for Mac users,\nit may help others as well. It comes with a nice illustrated support and a video.\n\nhttps://hellowebbooks.com/learn-command-line\n\n\nEnjoy this online class which will demistify the terminal in just 40 minutes!  \nhttps://www.udemy.com/command-line\n\n\nAn interactive tutorial that will reconcile you with the terminal.\n\nhttps://linuxsurvival.com/linux-tutorial-introduction\n\n\nA tutorial dividded in 13 sections to bring you from newbie to moderate wizard.\n\nhttps://ryanstutorials.net/linuxtutorial\n\n\nGit/GitHub\n\u00b6\n\n\nLearn git and GitHub using the \nGitHub Learning Lab\n. \nhttps://try.github.io\n\n\nBecome a git guru\n with Atlassian. \nhttps://www.atlassian.com/git/tutorials\n\n\nIntermediate\n\u00b6\n\n\nNow that you leveled up, let's bring some fun!\n\n\nPython\n\u00b6\n\n\nCompletely new to Python? Let \nReal Python\n help you learn everything about it.\n\nhttps://realpython.com/start-here/\n\n\nFrom zero to Hero with \nDive Into Python 3\n. This book covers all the facets of python, from writing a simple program,\nto using REST APIs, via unit tests. \nhttp://getpython3.com/diveintopython3/\n\n\nThe Hitchhiker\u2019s Guide to Python!\n is also a classic. An opiniated handbook which aims at making you a python expert.\n\nhttps://docs.python-guide.org/\n\n\nAdvanced\n\u00b6\n\n\n\"I'm here to serve you master.\"",
+            "title": "Learning resources"
+        },
+        {
+            "location": "/learning/learning/#learning-resources",
+            "text": "Sometimes people are affraid to tackle a task or join a project because they think they do not have the appriopriate\nknoweldge. While it might sometimes be true, we, at Request Yo Racks, consider our projects as the best opportunity to\nlearn! And to make it easier for you to learn the ropes, we compiled the best resources!",
+            "title": "Learning resources"
+        },
+        {
+            "location": "/learning/learning/#beginners",
+            "text": "Let's start with the fundamentals!",
+            "title": "Beginners"
+        },
+        {
+            "location": "/learning/learning/#terminal",
+            "text": "The  \"Really friendly intro to the command line\"  is a must read/watch for beginners! While targeted for Mac users,\nit may help others as well. It comes with a nice illustrated support and a video. https://hellowebbooks.com/learn-command-line  Enjoy this online class which will demistify the terminal in just 40 minutes!   https://www.udemy.com/command-line  An interactive tutorial that will reconcile you with the terminal. https://linuxsurvival.com/linux-tutorial-introduction  A tutorial dividded in 13 sections to bring you from newbie to moderate wizard. https://ryanstutorials.net/linuxtutorial",
+            "title": "Terminal"
+        },
+        {
+            "location": "/learning/learning/#gitgithub",
+            "text": "Learn git and GitHub using the  GitHub Learning Lab .  https://try.github.io  Become a git guru  with Atlassian.  https://www.atlassian.com/git/tutorials",
+            "title": "Git/GitHub"
+        },
+        {
+            "location": "/learning/learning/#intermediate",
+            "text": "Now that you leveled up, let's bring some fun!",
+            "title": "Intermediate"
+        },
+        {
+            "location": "/learning/learning/#python",
+            "text": "Completely new to Python? Let  Real Python  help you learn everything about it. https://realpython.com/start-here/  From zero to Hero with  Dive Into Python 3 . This book covers all the facets of python, from writing a simple program,\nto using REST APIs, via unit tests.  http://getpython3.com/diveintopython3/  The Hitchhiker\u2019s Guide to Python!  is also a classic. An opiniated handbook which aims at making you a python expert. https://docs.python-guide.org/",
+            "title": "Python"
+        },
+        {
+            "location": "/learning/learning/#advanced",
+            "text": "\"I'm here to serve you master.\"",
+            "title": "Advanced"
+        },
+        {
             "location": "/about/license/",
             "text": "License\n\u00b6\n\n\n\"Request Yo Racks\" is a collection of open source projects licensed under \nThe MIT License\n.",
             "title": "License"
