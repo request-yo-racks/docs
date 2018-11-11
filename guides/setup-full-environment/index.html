@@ -853,6 +853,10 @@ chmod <span class="m">400</span> <span class="s2">&quot;</span><span class="si">
 │   └── RYR_WEB_GOOGLE_MAPS_API_KEY
 └── ryr-env.sh
 </pre></div></p>
+<div class="admonition tips">
+<p class="admonition-title">Tips</p>
+<p>If for any reasone you need to remove the new line character (<code>\n</code>) in one of the files, refer to this <a href="https://unix.stackexchange.com/a/254753">StackExchange post</a>.</p>
+</div>
 <h2 id="fork-the-projects">Fork the projects<a class="headerlink" href="#fork-the-projects" title="Permanent link">&para;</a></h2>
 <p>Go to the <a href="https://github.com/request-yo-racks">Request Yo Racks</a> organization on Github and
 <a href="https://help.github.com/articles/fork-a-repo/">fork</a> the <code>infra</code>, <code>api</code>, and <code>web</code> projects (the <code>charts</code> and <code>docs</code> projects are optional as they are no required to run RYR).</p>
@@ -872,9 +876,9 @@ chmod <span class="m">400</span> <span class="s2">&quot;</span><span class="si">
 <p>Clone or update the projects (the <code>charts</code> and <code>docs</code> projects are optional as they are no required to run RYR).
 <div class="codehilite"><pre><span></span>mkdir -p <span class="s2">&quot;</span><span class="si">${</span><span class="nv">RYR_PROJECT_DIR</span><span class="si">}</span><span class="s2">&quot;</span>
 <span class="nb">cd</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">RYR_PROJECT_DIR</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="k">for</span> project in api charts docs infra web<span class="p">;</span> <span class="k">do</span>
+<span class="k">for</span> project in api charts docs infra landing-page web<span class="p">;</span> <span class="k">do</span>
   git clone git@github.com:<span class="si">${</span><span class="nv">GH_USER</span><span class="si">}</span>/<span class="si">${</span><span class="nv">project</span><span class="si">}</span>.git <span class="m">2</span>&gt; /dev/null <span class="o">||</span> git -C <span class="si">${</span><span class="nv">project</span><span class="si">}</span>/ pull upstream master<span class="p">;</span>
-  git  -C <span class="si">${</span><span class="nv">project</span><span class="si">}</span> remote add upstream git@github.com:request-yo-racks/<span class="si">${</span><span class="nv">project</span><span class="si">}</span>.git <span class="m">2</span>&gt; /dev/null<span class="p">;</span>
+  git -C <span class="si">${</span><span class="nv">project</span><span class="si">}</span> remote add upstream git@github.com:request-yo-racks/<span class="si">${</span><span class="nv">project</span><span class="si">}</span>.git <span class="m">2</span>&gt; /dev/null<span class="p">;</span>
 <span class="k">done</span>
 </pre></div></p>
 </li>
@@ -891,15 +895,17 @@ make provision configure
 <h3 id="api">API<a class="headerlink" href="#api" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="nb">eval</span> <span class="k">$(</span>minikube docker-env<span class="k">)</span>
 <span class="nb">cd</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">RYR_PROJECT_DIR</span><span class="si">}</span><span class="s2">/api&quot;</span>
-make build-docker make deploy-minikube-<span class="o">{</span>api,flower,celery-worker<span class="o">}</span>
+make build-docker deploy-minikube-<span class="o">{</span>api,flower,celery-worker<span class="o">}</span>
 </pre></div>
 
 <p>Test your setup from a terminal:
-<div class="codehilite"><pre><span></span>curl -i http://api.192.168.99.100.nip.io/places/30.318673580117846,-97.72446155548096
+<div class="codehilite"><pre><span></span>curl -X GET <span class="se">\</span>
+  <span class="s1">&#39;http://api.192.168.99.100.nip.io/1.0/places?location=30.318673580117846,-97.72446155548096&#39;</span>
 </pre></div>
-Or browse it:
-<div class="codehilite"><pre><span></span>open http://api.192.168.99.100.nip.io/places/30.318673580117846,-97.72446155548096
-</pre></div></p>
+Or from a web browser:
+<a href="http://api.192.168.99.100.nip.io/1.0/places?location=30.318673580117846,-97.72446155548096">http://api.192.168.99.100.nip.io/1.0/places?location=30.318673580117846,-97.72446155548096</a></p>
+<p>You can also browse the API documentation:
+<a href="http://api.192.168.99.100.nip.io/1.0/ui">http://api.192.168.99.100.nip.io/1.0/ui</a></p>
 <h3 id="web">Web<a class="headerlink" href="#web" title="Permanent link">&para;</a></h3>
 <div class="admonition notes">
 <p class="admonition-title">Notes</p>
@@ -908,12 +914,12 @@ file by the <code>Makefile</code>. See the <code>init-config</code> target for m
 </div>
 <div class="codehilite"><pre><span></span><span class="nb">eval</span> <span class="k">$(</span>minikube docker-env<span class="k">)</span>
 <span class="nb">cd</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">RYR_PROJECT_DIR</span><span class="si">}</span><span class="s2">/web&quot;</span>
-make
-polymer serve
+npm i
+npm run dev
 </pre></div>
 
 <p>Check the web application:
-<div class="codehilite"><pre><span></span>open http://127.0.0.1:8081
+<div class="codehilite"><pre><span></span>open http://127.0.0.1:8000
 </pre></div></p>
                 
                   
